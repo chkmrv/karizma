@@ -1,0 +1,24 @@
+/*<!-- "Разработка сервиса - KAMOD Creative Agency  vkamode.ru"  -->*/
+@media (max-width: 1920px) { 
+	.enter.registr {
+		margin-top: 7vh;
+	}
+}
+
+/* #1- Large desktop */
+@media (max-width: 1600px) { 
+	.enter.registr {
+		margin-top: 6vh;
+	}
+}
+
+@media (max-width: 1400px) { 
+	.enter.registr {
+		margin-top: 0vh;
+	}
+
+	.container input.md-input {
+		margin-bottom: 8px;
+	}
+	
+}

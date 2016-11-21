@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta http-equiv="pragma" content="no-cache">
+	<meta name="robots" content="all">
+	<meta name="keywords" content="креативное, агентство, Kamod, Creative, agency">
+	<meta name="description" content="Креативное агентство Камод">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <!-- "Разработка сервиса - KAMOD Creative Agency  vkamode.ru"  -->
+	
+	<title>Kariz.ma-registration</title>
+
+	<link rel="stylesheet" href="css/reset.css">	
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href='css/font-awesome.css'>
+	<link rel="stylesheet" href="css/media-queries.css">
+	<link rel="stylesheet" href="css/angular-material.css">
+
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,700,600,800&amp;subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Tenor+Sans' rel='stylesheet' type='text/css'>
+
+	<meta property="og:title" content="Kariz.ma вход: Главная страница">
+    <meta property="og:description" content="Каризма">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://кariz.ma">
+    <meta property="og:image" content="http://кariz.ma/img/logo.png">
+    <meta property="og:site_name" content="кariz.ma">
+    <meta property="og:locale" content="ru_RU">
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> 
+	<![endif]-->
+
+</head>
+<body>
+<div class="page">	
+	
+	<header class="container">
+		<a href="/"><img src="img/logo.png" alt="logo"></a>
+		<nav>
+			<a href="/">вход</a>
+			<span>|</span>
+			<a href="registr.html">регистрация</a>
+		</nav>
+	</header>
+
+	<section class="container">
+		<div ng-controller="DemoCtrl" layout="column" ng-app="MyApp">
+				<div class="enter registr">
+					<h1>Создание учетной записи</h1>
+					<md-content>
+						<a href="/" class="link">У меня уже есть учетная запись KARIZMA</a>
+					    <form name="userForm" method="post">
+					    	<div layout-sm="column">
+						        <md-input-container>
+						        	<label>Имя</label>
+						        	<input ng-model="user.firstName">
+						        </md-input-container>
+						        <md-input-container>
+						        	<label>Фамилия</label>
+						        	<input ng-model="user.secondName">
+						        </md-input-container>
+						        <md-input-container>
+						        	<label>Отчество</label>
+						        	<input ng-model="user.middleName">
+						        </md-input-container>
+						        <md-input-container>
+						        	<label>Телефон</label>
+						        	<input ng-model="phone">
+						        </md-input-container>
+						        <md-input-container>
+						        	<label>E-mail</label>
+						        	<input ng-model="mail">
+						        </md-input-container>
+						        <md-input-container>
+						        	<label>Код браслета</label>
+						        	<input ng-model="theMax">
+						        </md-input-container>
+						        <md-input-container>
+						        	<md-button class="md-raised md-primary btn-enter">создать</md-button>
+						        </md-input-container>
+					    	</div>
+					    </form>
+					</md-content>
+				</div>
+		</div>
+	</section>
+	
+</div><!-- page -->		
+
+<div class="clear"></div>
+<div class="wrap-footer">
+	<footer>
+		<div class="copy">
+			<p class="text">Нажимая кнопку “Создать”, вы принимаете <a href="#" class="link">Условия пользовательского соглашения</a></p>
+		</div>
+		<div class="developed">
+	      <p>Разработано в <br><a href="http://vkamode.ru" class="deepgreen">"KAMOD" Creative Agency</a></p>
+	    </div>
+		</div>
+	</footer>
+</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script> 
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.js"></script> 
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-animate.min.js"></script> 
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-route.min.js"></script> 
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-aria.min.js"></script> 
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-messages.min.js"></script> 
+	<script src="http://cdn.rawgit.com/angular/bower-material/v0.10.0/angular-material.js"></script> 
+	<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-114/assets-cache.js"></script> 
+	<script src="js/script.js"></script>  
+	<script type="text/javascript">
+			angular.module('MyApp')
+		  	.controller('DemoCtrl', function($scope) {
+		    $scope.user = {
+		      title: 'Developer',
+		      email: 'ipsum@lorem.com',
+		      firstName: '',
+		      lastName: '' ,
+		      company: 'Google' ,
+		      address: '1600 Amphitheatre Pkwy' ,
+		      city: 'Mountain View' ,
+		      state: 'CA' ,
+		      biography: 'Loves kittens, snowboarding, and can type at 130 WPM.\n\nAnd rumor has it she bouldered up Castle Craig!',
+		      postalCode : '94043'
+		    };
+		  })
+		  .config( function($mdThemingProvider){
+
+    // Configure a dark theme with primary foreground yellow
+
+    $mdThemingProvider.theme('docs-dark', 'default')
+        .primaryPalette('yellow')
+        .dark();
+
+  });
+</script>
+</body>
+</html>
